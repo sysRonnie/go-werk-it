@@ -1,0 +1,9 @@
+package message
+
+type ErrorMessageProps struct {
+    ErrorMsg string
+}
+
+templ ErrorMessage(props ErrorMessageProps) {
+    <p> {props.ErrorMsg} </p>
+}

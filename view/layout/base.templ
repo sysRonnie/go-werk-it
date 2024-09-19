@@ -1,5 +1,9 @@
 package layout
 
+import (
+    "go-werk-it/view/shared"
+)
+
 templ Base() {
     <html lang="en">
         <head>
@@ -15,7 +19,8 @@ templ Base() {
         </head>
 
         <body class="antialiased">
-        
+            @shared.NavBar()
+            
             { children... }
         </body>
     </html>
