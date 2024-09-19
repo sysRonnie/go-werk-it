@@ -1,0 +1,46 @@
+package page
+
+import "go-werk-it/view/layout"
+
+
+templ Landing() {
+
+    @layout.Base(){
+        <div class="page">
+            <div class="action-bar">
+                <button class="action-button"> Button One </button>
+                <button class="action-button"> Button Two </button>
+            </div>
+        </div>
+    }
+
+    <script>
+        console.log("Script Tag Working!");
+    </script>
+
+    <style>
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .action-bar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            width: 350px;
+            background-color: lightgray;
+        }
+
+        .text{
+            color: red;
+        }
+    </style>
+}
