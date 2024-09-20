@@ -29,12 +29,8 @@ button:not(.secondary) {
     outline: none;
 }
 
-button.secondary{
-    background-color: red;
-}
-
 button:not(.secondary):hover {
-    background-color: var(--border-color);
+    background-color: var(--secondary-color);
     color: var(--background-color);
     border-color: var(--border-color);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -51,6 +47,45 @@ button:not(.secondary):focus {
     box-shadow: 0 0 0 3px rgba(93, 127, 190, 0.5);
 }
 
+button.secondary{
+    height: 35px;
+    width: 100%;
+    background-color: var(--background-color);
+    border: 2px solid var(--brand-color);
+    border-radius: 16px;
+    cursor: pointer;
+    color: var(--brand-color);
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+button.secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border-color: var(--border-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button.secondary:active {
+    background-color: var(--brand-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+button.secondary:focus {
+    border-color: var(--brand-color);
+    box-shadow: 0 0 0 3px rgba(93, 127, 190, 0.5);
+}
+
+
+
+
 @media (max-width: 640px) {
     button {
         height: 40px;
@@ -59,9 +94,15 @@ button:not(.secondary):focus {
     }
 }
 
+h1 {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
 a {
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-weight: bold;
+    font-size: 14px;
     text-decoration: none;
     padding: 4px 8px;
     border-radius: 4px;

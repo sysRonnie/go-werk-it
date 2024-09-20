@@ -1,24 +1,14 @@
 package component
 
 templ Login() {
-    <form action="/post" method="POST">
-        <input type="username" name="username" placeholder="Enter username" />
-        <input type="password" name="password" placeholder="Enter password" />
-        <button type="submit">Submit</button>
+    <h1>Login to your account!</h1>
+    <form action="/login" method="/POST">
+        <input type="username" name="username" placeholder="Enter Username" />
+        <input type="password" name="password" placeholder="Enter Password" />
+        <button type="submit">Log in</button>
+        <a href="/forgot-password">Forgot password?</a>
     </form>
 
-    <style>
-        form{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
+    <button class="secondary" hx-get="/template/register" hx-target="#container" hx-swap="inneHTML"> Create new account </button>
 
-            width: 350px;
-            background-color: lightblue;
-            border: 2px solid purple;
-            border-radius: 16px;
-
-        }
-    </style>
 }

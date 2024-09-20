@@ -1,0 +1,14 @@
+package component
+
+templ Register() {
+    <h1>Register an account!</h1>
+    <form action="/api/register" method="POST">
+        <input type="text" name="username" placeholder="Enter Username" />
+        <input type="password" name="password" placeholder="Enter Password" />
+        <button type="submit">Register Account</button>
+    </form>
+
+    <button class="secondary" hx-get="/template/login" hx-target="#container" hx-swap="innerHTML">
+        Already have an account?
+    </button>
+}

@@ -26,7 +26,7 @@ func Login() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<form action=\"/post\" method=\"POST\"><input type=\"username\" name=\"username\" placeholder=\"Enter username\"> <input type=\"password\" name=\"password\" placeholder=\"Enter password\"> <button type=\"submit\">Submit</button></form><style>\n        form{\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            justify-content: space-around;\n\n            width: 350px;\n            background-color: lightblue;\n            border: 2px solid purple;\n            border-radius: 16px;\n\n        }\n    </style>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1>Login to your account!</h1><form action=\"/login\" method=\"/POST\"><input type=\"username\" name=\"username\" placeholder=\"Enter Username\"> <input type=\"password\" name=\"password\" placeholder=\"Enter Password\"> <button type=\"submit\">Log in</button> <a href=\"/forgot-password\">Forgot password?</a></form><button class=\"secondary\" hx-get=\"/template/register\" hx-target=\"#container\" hx-swap=\"inneHTML\">Create new account </button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
